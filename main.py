@@ -16,6 +16,5 @@ print(f"Listening on port {SERVER_PORT}...")
 
 while True:
         client_socket, client_address= server_socket.accept()
-        print(client_address)
-        print(client_socket)    
-    
+        request= client_socket.recv(1024).decode() #(bufsize: int, flags: int = ..., /) -> bytes
+        print (request)
