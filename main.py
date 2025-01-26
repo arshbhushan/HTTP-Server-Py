@@ -14,10 +14,8 @@ server_socket.listen(5)
 
 print(f"Listening on port {SERVER_PORT}...")
 
-try:
-    client_socket, client_address= server_socket.accept()
-    print(client_address)
-    print(client_socket)    
-except:
-    time.sleep(1)    
-    print('Error caught, kindly check.')
+while True:
+        client_socket, client_address= server_socket.accept()
+        print(client_address)
+        print(client_socket)    
+    
